@@ -122,6 +122,10 @@ asyncio.run(..., loop_factory=asyncio.new_event_loop)
 - Python 3.14 support
   - Fix broken `asyncio.current_task()` and others
   - Fix `DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16`
+
+- Fix `call_soon()` callbacks not being called during `run()`
+  ([#3](https://github.com/Chaoses-Ib/nest-asyncio2/issues/3)).
+
 - To avoid potential bugs,
   `apply()` will warn if `asyncio` is already patched
   by `nest_asyncio` on Python 3.12+.
